@@ -22,7 +22,7 @@ export default function ProjectsSection() {
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 								<div className="space-y-6">
 									<div>
-										<h3 className="text-2xl font-bold mb-4">Enterprise E-commerce Platform</h3>
+										<h3 className="text-2xl font-bold mb-4">AWS Cloud Resume Challenge</h3>
 										<p className="text-gray-400">
 											Portfolio website that is hosted and managed on AWS cloud. Fun fact - its this website!
 										</p>
@@ -47,13 +47,22 @@ export default function ProjectsSection() {
 										</div>
 									</div>
 
-									<div className="space-y-3">
-										<h4 className="text-sm font-semibold text-teal-400">AWS Cloud services used</h4>
-										<ul className="space-y-2 text-sm text-gray-400">
-											<li>• Route 53 as the DNS</li>
-											<li>• S3 - store the static files</li>
-											<li>• CloudFront</li>
-										</ul>
+									<div className="grid grid-cols-2 gap-6">
+										<div>
+											<h4 className="text-sm font-semibold text-teal-400 mb-3">AWS Cloud services</h4>
+											<ul className="space-y-2 text-sm text-gray-400">
+												<li>• Route 53</li>
+												<li>• S3 - store the static files</li>
+												<li>• CloudFront</li>
+											</ul>
+										</div>
+										<div>
+											<h4 className="text-sm font-semibold text-teal-400 mb-3">DevOps</h4>
+											<ul className="space-y-2 text-sm text-gray-400">
+												<li>• GitHub Actions</li>
+												<li>• CI/CD Pipelines</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 
@@ -127,7 +136,7 @@ export default function ProjectsSection() {
 					</motion.div>
 
 					{/* Real-time Analytics Platform */}
-					<motion.div
+					{/* <motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -178,7 +187,7 @@ export default function ProjectsSection() {
 									<h4 className="text-sm font-semibold text-gray-400 mb-4">Data Flow Architecture</h4>
 									<div className="aspect-[4/3] bg-black/50 rounded-lg p-4">
 										<svg className="w-full h-full" viewBox="0 0 400 300">
-											{/* Data Sources */}
+											Data Sources
 											<g>
 												<rect x="20" y="20" width="110" height="30" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
 												<rect x="145" y="20" width="110" height="30" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
@@ -194,7 +203,7 @@ export default function ProjectsSection() {
 												</text>
 											</g>
 
-											{/* Event Processing */}
+											Event Processing
 											<g>
 												<rect x="20" y="80" width="360" height="40" rx="4" className="fill-purple-500/20 stroke-purple-500" strokeWidth="1" />
 												<text x="200" y="105" textAnchor="middle" className="fill-gray-400 text-[12px]">
@@ -202,7 +211,7 @@ export default function ProjectsSection() {
 												</text>
 											</g>
 
-											{/* Processing Layer */}
+											Processing Layer
 											<g>
 												<rect x="20" y="150" width="170" height="40" rx="4" className="fill-teal-500/20 stroke-teal-500" strokeWidth="1" />
 												<rect x="210" y="150" width="170" height="40" rx="4" className="fill-teal-500/20 stroke-teal-500" strokeWidth="1" />
@@ -214,7 +223,7 @@ export default function ProjectsSection() {
 												</text>
 											</g>
 
-											{/* Storage Layer */}
+											Storage Layer
 											<g>
 												<rect x="20" y="220" width="170" height="30" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
 												<rect x="210" y="220" width="170" height="30" rx="4" className="fill-purple-500/20 stroke-purple-500" strokeWidth="1" />
@@ -226,7 +235,7 @@ export default function ProjectsSection() {
 												</text>
 											</g>
 
-											{/* API Layer */}
+											API Layer
 											<g>
 												<rect x="20" y="270" width="360" height="30" rx="4" className="fill-teal-500/20 stroke-teal-500" strokeWidth="1" />
 												<text x="200" y="290" textAnchor="middle" className="fill-gray-400 text-[12px]">
@@ -234,7 +243,7 @@ export default function ProjectsSection() {
 												</text>
 											</g>
 
-											{/* Connection Lines */}
+											Connection Lines
 											<g className="stroke-gray-600" strokeWidth="1">
 												<line x1="75" y1="50" x2="75" y2="80" />
 												<line x1="200" y1="50" x2="200" y2="80" />
@@ -249,7 +258,8 @@ export default function ProjectsSection() {
 								</div>
 							</div>
 						</div>
-					</motion.div>
+					</motion.div> */}
+
 				</div>
 			</div>
 		</section>
