@@ -2,11 +2,11 @@ name: Build & Deploy Next.js → S3
 
 on:
   push:
-    branches: [main]          # trigger only when main is updated
+    branches: [main]
 
 env:
-  BUCKET_NAME: pranavbedre.in # <-- your S3 static-site bucket
-  REGION: ap-south-1          # <-- the bucket’s region (e.g. Mumbai)
+  BUCKET_NAME: pranavbedre.in
+  REGION: ap-south-1
 
 jobs:
   build-and-deploy:
@@ -27,17 +27,9 @@ jobs:
         run: npm ci
 
       - name: Build (creates ./out)
-        run: npm run build                   # make sure this script runs `next export`
+        run: npm run build
 
-      # 4 Authenticate to AWS (OIDC-role or long-lived keys—pick ONE)
-      # Option A (🔒 recommended): assume an IAM role via OIDC
-      # - uses: aws-actions/configure-aws-credentials@v5
-      #    with:
-      #      role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-      #      aws-region: ${{ env.REGION }}
-
-      # Option B (simple): use access keys stored as repo secrets
-      - uses: aws-actions/configure-aws-credentials@v5  # :contentReference[oaicite:1]{index=1}
+      - uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -47,10 +39,12 @@ jobs:
       - name: Deploy to S3
         run: |
           aws s3 sync ./out s3://$BUCKET_NAME \
-            --acl public-read  \
             --follow-symlinks  \
             --delete           # removes files that no longer exist locally
 
-      # (Optional) 6 If CloudFront sits in front of the bucket, invalidate its cache
-      # - name: Invalidate CloudFront
-      #   run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_DIST_ID }} --paths "/*"
+      # 6  Invalidate CloudFront cache so viewers see the new build
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CF_DIST_ID }} \
+            --paths "/*"
