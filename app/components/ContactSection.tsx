@@ -38,7 +38,7 @@ export default function ContactSection() {
 							</svg>
 							Get in Touch
 						</a>
-						<a
+						{/* <a
 							href="/resume.pdf"
 							target="_blank"
 							className="px-8 py-3 bg-black border border-gray-800 rounded-lg font-medium hover:bg-gray-900 transition-colors inline-flex items-center justify-center gap-2"
@@ -52,7 +52,7 @@ export default function ContactSection() {
 								<path fillRule="evenodd" d="M8 11a1 1 0 100 2h4a1 1 0 100-2H8zm0-4a1 1 0 100 2h4a1 1 0 100-2H8z" clipRule="evenodd" />
 							</svg>
 							View Resume
-						</a>
+						</a> */}
 					</div>
 
 					{/* Social Links */}
