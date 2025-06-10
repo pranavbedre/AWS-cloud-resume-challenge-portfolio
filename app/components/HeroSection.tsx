@@ -20,7 +20,7 @@ export default function HeroSection() {
 						</h1>
 						<h2 className="text-2xl md:text-4xl font-bold text-white">Technical Business Analyst</h2>
 						<p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-							Spearheading DevOps and AWS architecture @ <span className="text-purple-400">ZELLIS</span>
+							Orchestrating DevOps and AWS architecture @ <span className="text-purple-400">ZELLIS</span>
 						</p>
 						<p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
 							Previously a CPE (Customer Premises Equipment) developer @ <span className="text-blue-400">Deutsche Telekom</span>{' '}
