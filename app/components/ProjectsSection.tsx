@@ -36,7 +36,7 @@ export default function ProjectsSection() {
 												<li>• Tailwind CSS</li>
 											</ul>
 										</div>
-										<div>
+										{/* <div>
 											<h4 className="text-sm font-semibold text-purple-400 mb-3">Backend Architecture</h4>
 											<ul className="space-y-2 text-sm text-gray-400">
 												<li>• Node.js Microservices</li>
@@ -44,10 +44,7 @@ export default function ProjectsSection() {
 												<li>• Kafka Event Streaming</li>
 												<li>• Elasticsearch Product Search</li>
 											</ul>
-										</div>
-									</div>
-
-									<div className="grid grid-cols-2 gap-6">
+										</div> */}
 										<div>
 											<h4 className="text-sm font-semibold text-teal-400 mb-3">AWS Cloud services</h4>
 											<ul className="space-y-2 text-sm text-gray-400">
@@ -56,6 +53,10 @@ export default function ProjectsSection() {
 												<li>• CloudFront</li>
 											</ul>
 										</div>
+									</div>
+
+									<div className="grid grid-cols-2 gap-6">
+										
 										<div>
 											<h4 className="text-sm font-semibold text-teal-400 mb-3">DevOps</h4>
 											<ul className="space-y-2 text-sm text-gray-400">
